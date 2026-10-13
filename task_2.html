@@ -1,0 +1,153 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conference Registration Form</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f4f8;
+            margin: 30px;
+        }
+
+        form {
+            max-width: 500px;
+            margin: auto;
+            padding: 25px;
+            background-color: white;
+            border-radius: 10px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #234567;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            margin-bottom: 6px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="number"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+
+        .option {
+            margin: 8px 0;
+        }
+
+        button {
+            margin-top: 15px;
+            padding: 9px 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form>
+        <h1>Conference Registration Form</h1>
+
+        <label for="fullname">Full Name:</label>
+        <input type="text" id="fullname" name="fullname"
+               placeholder="Enter your full name" required>
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email"
+               placeholder="Enter your email address" required>
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age"
+               min="18" max="99" required>
+
+        <p>Gender:</p>
+        <div class="option">
+            <input type="radio" id="male" name="gender" value="Male">
+            <label for="male" style="display:inline">Male</label>
+        </div>
+        <div class="option">
+            <input type="radio" id="female" name="gender" value="Female">
+            <label for="female" style="display:inline">Female</label>
+        </div>
+
+        <label for="country">Country of Residence:</label>
+        <select id="country" name="country">
+            <option value="Malaysia">Malaysia</option>
+            <option value="Singapore">Singapore</option>
+            <option value="Indonesia">Indonesia</option>
+            <option value="Other">Other</option>
+        </select>
+
+        <p>Areas of Interest:</p>
+        <div class="option">
+            <input type="checkbox" id="software" name="interest"
+                   value="Software Development">
+            <label for="software" style="display:inline">
+                Software Development
+            </label>
+        </div>
+
+        <div class="option">
+            <input type="checkbox" id="data" name="interest"
+                   value="Data Science">
+            <label for="data" style="display:inline">Data Science</label>
+        </div>
+
+        <div class="option">
+            <input type="checkbox" id="security" name="interest"
+                   value="Cybersecurity">
+            <label for="security" style="display:inline">
+                Cybersecurity
+            </label>
+        </div>
+
+        <div class="option">
+            <input type="checkbox" id="ai" name="interest"
+                   value="Artificial Intelligence">
+            <label for="ai" style="display:inline">
+                Artificial Intelligence
+            </label>
+        </div>
+
+        <p>Experience Level:</p>
+        <div class="option">
+            <input type="radio" id="beginner" name="experience"
+                   value="Beginner">
+            <label for="beginner" style="display:inline">Beginner</label>
+        </div>
+
+        <div class="option">
+            <input type="radio" id="intermediate" name="experience"
+                   value="Intermediate">
+            <label for="intermediate" style="display:inline">
+                Intermediate
+            </label>
+        </div>
+
+        <div class="option">
+            <input type="radio" id="advanced" name="experience"
+                   value="Advanced">
+            <label for="advanced" style="display:inline">Advanced</label>
+        </div>
+
+        <label for="comments">Comments or Questions:</label>
+        <textarea id="comments" name="comments" rows="5"
+                  placeholder="Any comments or questions?"></textarea>
+
+        <button type="submit">Register</button>
+        <button type="reset">Reset</button>
+    </form>
+
+</body>
+</html>
